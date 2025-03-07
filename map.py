@@ -32,3 +32,8 @@ class Map:
                    screen.blit(self.textures[col], (position_x * self.title_size, position_y * self.title_size))
                else:
                    pygame.draw.rect(screen, (50, 100, 50), (position_x * self.title_size, position_y * self.title_size, self.title_size, self.title_size))
+
+    def is_walkable(self, position_x, position_y):
+        if 0 <= position_y < len(self.map) and 0 <= position_x < len(self.map[0]):
+            return self.map[position_y][position_x] == 1
+        return False
