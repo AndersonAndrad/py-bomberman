@@ -35,7 +35,7 @@ class Player:
             bomb.draw(screen)
 
     def plant_bomb(self):
-        self.bombs.append(Bomb(self.position_x, self.position_y, self.tile_size))
+        self.bombs.append(Bomb(self.position_x, self.position_y, self.tile_size, self.map))
 
     def update(self):
         for bomb in self.bombs:
