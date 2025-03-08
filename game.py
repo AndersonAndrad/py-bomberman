@@ -20,6 +20,7 @@ class Game:
         while self.running:
             self.handle_events()
             self.draw()
+            self.player.update()
 
             pygame.display.flip()
             self.clock.tick(FPS)
